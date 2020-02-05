@@ -3,6 +3,7 @@
 #define STACK_OVER_FLOW -1
 #define STACK_IS_EMPTY 0
 #define TRUE 1
+#define FALSE 0
 typedef unsigned char uint8_t;
 typedef signed char int8_t;
 typedef struct Stack{

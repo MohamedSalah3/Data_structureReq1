@@ -39,3 +39,27 @@ if(G_stack_ptr ->count == 99)
 {return STACK_IS_EMPTY;
 }else{return TRUE;}
 }
+
+uint8_t checkForBalancedParantheses(char* expression)
+{uint8_t loop=0,paranthese_loop=0;
+char arr_of_paranthese[20];
+  while (!(is_full_or_empty()==STACK_IS_EMPTY))
+  {
+  if( (expression[loop]=='{')||
+        (expression[loop]== '}')||
+            (expression[loop]=='(')||
+              (expression[loop]==')') ||
+                (expression[loop]=='[') ||
+                (expression[loop]==']')  )
+                {
+                  arr_of_paranthese[paranthese_loop]=expression[loop];
+                  paranthese_loop++;
+                }
+      push(G_stack_ptr,expression[loop]);
+      loop++;
+    /* code */
+  }
+return TRUE;
+}
+else{return FALSE;}
+}

@@ -3,8 +3,11 @@
 #include "stack.h"
 #define MAX 100
 Stack *G_stack_ptr=NULL;
-int main(int argc, char const *argv[])
-{uint8_t poped_data=0;
+int main(int argc,char const *argv[])
+{
+char arr_of_char[100]={'0'};
+uint8_t is_Balanced=0;
+uint8_t poped_data=0;
 Stack Data_base1;
 G_stack_ptr=&Data_base1;
 Data_base1.size=MAX;
@@ -21,5 +24,7 @@ POP(G_stack_ptr,&poped_data);
 printf("%d\n",poped_data);
 push(G_stack_ptr,6);
 printf("%d\n",(G_stack_ptr->ptr_to_array[94]));
+is_Balanced=checkForBalancedParantheses(arr_of_char);
+
   return 0;
 }
