@@ -17,4 +17,5 @@ void push(Stack *info,uint8_t data);
 
 void POP(Stack *info,uint8_t* data);
 int8_t is_full_or_empty(void);
+uint8_t checkForBalancedParantheses(char* expression);
 #endif

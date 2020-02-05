@@ -33,7 +33,7 @@ void POP(Stack *info,uint8_t *data)
       }
 }
 int8_t is_full_or_empty(void) {
-if(G_stack_ptr ->count == 99)
+if((G_stack_ptr ->count)== (G_stack_ptr->size)-1)
 { return STACK_OVER_FLOW;
 }else if(G_stack_ptr ->count ==STACK_IS_EMPTY)
 {return STACK_IS_EMPTY;
@@ -41,9 +41,10 @@ if(G_stack_ptr ->count == 99)
 }
 
 uint8_t checkForBalancedParantheses(char* expression)
-{uint8_t loop=0,paranthese_loop=0;
+{
+uint8_t loop=0,paranthese_loop=0;
 char arr_of_paranthese[20];
-  while (!(is_full_or_empty()==STACK_IS_EMPTY))
+  while (expression[loop])
   {
   if( (expression[loop]=='{')||
         (expression[loop]== '}')||
@@ -57,9 +58,13 @@ char arr_of_paranthese[20];
                 }
       push(G_stack_ptr,expression[loop]);
       loop++;
-    /* code */
+
   }
-return TRUE;
+
+while (paranthese_loop > 0) {
+printf("%c\n", arr_of_paranthese[paranthese_loop]);
+  paranthese_loop--;
 }
-else{return FALSE;}
+return 1;
+
 }
