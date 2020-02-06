@@ -42,9 +42,9 @@ if((G_stack_ptr ->count)== (G_stack_ptr->size)-1)
 
 uint8_t checkForBalancedParantheses(char* expression)
 {
-uint8_t loop=0,paranthese_loop=0;
+uint8_t loop=0,paranthese_loop=0,last=0,small_loop=0;
 char arr_of_paranthese[20];
-  while (expression[loop])
+  do
   {
   if( (expression[loop]=='{')||
         (expression[loop]== '}')||
@@ -58,13 +58,27 @@ char arr_of_paranthese[20];
                 }
       push(G_stack_ptr,expression[loop]);
       loop++;
+  }while (expression[loop]);
+/*last=paranthese_loop;
+for()
+{
 
-  }
 
-while (paranthese_loop > 0) {
-printf("%c\n", arr_of_paranthese[paranthese_loop]);
-  paranthese_loop--;
+}*/
+while (paranthese_loop >= 0) {
+if(arr_of_paranthese[paranthese_loop-1-small_loop] - arr_of_paranthese[small_loop] <= 2)
+{
+  small_loop++;
+}else{
+  printf("parantheses not balanced\n");
 }
+if(paranthese_loop){
+  paranthese_loop--;
+}else{break;}
+}
+
+
+
 return 1;
 
 }
