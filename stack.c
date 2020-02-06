@@ -59,6 +59,7 @@ char arr_of_paranthese[20];
       push(G_stack_ptr,expression[loop]);
       loop++;
   }while (expression[loop]);
+
 while (paranthese_loop >= 0) {
 if(arr_of_paranthese[paranthese_loop-1-small_loop] - arr_of_paranthese[small_loop] <= 2)
 {

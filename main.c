@@ -5,7 +5,8 @@
 Stack *G_stack_ptr=NULL;
 int main(int argc,char const *argv[])
 {
-char arr_of_char[]= {'{','M','o','h','a','m','e','d','(',')','}','\0'};
+char arr_of_char[]= {'{','M','o','h','a','m'
+,'e','d','(',')','}','\0'};
 uint8_t is_Balanced=0;
 uint8_t poped_data=0;
 Stack Data_base1;
