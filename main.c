@@ -25,6 +25,11 @@ printf("%d\n",poped_data);
 push(G_stack_ptr,6);
 printf("%d\n",(G_stack_ptr->ptr_to_array[94]));
 is_Balanced=checkForBalancedParantheses(arr_of_char);
-
+if(is_Balanced)
+{
+  printf("parantheses balanced\n");
+}else{
+  printf("parantheses not balanced\n");
+}
   return 0;
 }

@@ -63,16 +63,14 @@ while (paranthese_loop >= 0) {
 if(arr_of_paranthese[paranthese_loop-1-small_loop] - arr_of_paranthese[small_loop] <= 2)
 {
   small_loop++;
+  return 1;
 }else{
   printf("parantheses not balanced\n");
+return 0;
 }
 if(paranthese_loop){
   paranthese_loop--;
 }else{break;}
 }
-
-
-
-return 1;
 
 }
